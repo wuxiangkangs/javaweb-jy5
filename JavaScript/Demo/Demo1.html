@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+</head>
+<body>
+<form action="">
+    <input type="text" placeholder="账户" id="inp" onblur="ceshi()">//移动光标显示登录成功（失败）
+    <input type="password" placeholder="密码" id="inp2">
+    <input type="submit" value="登录" onclick="login()">
+</form>
+<div id="dd"></div>
+</body>
+<script>
+    var  u = "伍向康";
+    var  p = 123;
+
+
+
+    //获取用户输入的参数
+    var uname = document.getElementById("inp");
+    var psd = document.getElementById("inp2");
+    var dd = document.getElementById("dd");
+function login(){
+
+    // alert(uname.value);
+    if (uname.value===u) {
+        alert("登陆成功")
+    }else{
+        alert("登陆失败")
+    }
+}
+
+function ceshi(){
+    if (uname.value===u){
+dd.innerText  = "用户名正确";
+dd.style.color = "green";
+    }else{
+        dd.innerText = "用户名错误";
+        dd.style.color = "red";
+    }
+}
+</script>
+</html>

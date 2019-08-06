@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    for (var a = 1; a <=1000 ; a++) {
+        if (a%5===0 || a%6===0){
+            console.log(a);
+        }
+
+    }
+    var x,y,z;
+    for (var i = 100; i <=999 ; i++) {
+        x = Math.round(i/100);
+        y = Math.round(i%100);
+        z = Math.round(i%10);
+        if (x>y && z>x &&(x+y+z)===(x*y*z)){
+            console.log(i);
+        }
+
+    }
+    var m,n,o;
+    for (var i = 100; i <=999 ; i++) {
+        m = (i-o-m*10)/100;
+        n = (i-o)%100/10;
+        o = i%10;
+        if ((m*m*m)+(n*n*n)+(o*o*o)===i){
+            console.log(i);
+        }
+
+    }
+</script>
+</html>
